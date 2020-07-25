@@ -29,9 +29,15 @@ class insta_logger():
         login_key.send_keys(self.username)
         login_pass.send_keys(self.password)
         login_pass.send_keys(Keys.ENTER)
-        sleep(6)        # self.browser.fullscreen_window()
+        sleep(6)
         
-        # threading.Thread.start(logger)
+        '''this is basically the info buttons about 
+        you want to save passwords or not 
+        
+        and whether you want to recieve the notifications or not 
+        
+        !!!warning this is case with chrome do have a check with other drivers too
+        '''
         self.browser.find_element_by_xpath("//button[text()='Not Now']").click()
         '''
         you can use either tag method or xpath method 
@@ -87,10 +93,7 @@ class insta_logger():
         msg_search=self.browser.find_element_by_class_name("focus-visible")
         msg_search.send_keys('sorry but this process of experiment will go on for sometime ')
         msg_search.send_keys(Keys.RETURN)
-        
-   
-
-
+ 
 bot=insta_logger("your_username","your_password")
 bot.login_in_func()
 
