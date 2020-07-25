@@ -29,9 +29,15 @@ class insta_logger():
         login_key.send_keys(self.username)
         login_pass.send_keys(self.password)
         login_pass.send_keys(Keys.ENTER)
-        sleep(6)        # self.browser.fullscreen_window()
+        sleep(6)
         
-        # threading.Thread.start(logger)
+        '''this is basically the info buttons about 
+        you want to save passwords or not 
+        
+        and whether you want to recieve the notifications or not 
+        
+        !!!warning this is case with chrome do have a check with other drivers too
+        '''
         self.browser.find_element_by_xpath("//button[text()='Not Now']").click()
         '''
         you can use either tag method or xpath method 
@@ -87,56 +93,18 @@ class insta_logger():
         msg_search=self.browser.find_element_by_class_name("focus-visible")
         msg_search.send_keys('sorry but this process of experiment will go on for sometime ')
         msg_search.send_keys(Keys.RETURN)
-        
-        
-    def liker(self,username,class_name):
-        sleep(3)
-        self.browser.get("https://instagram.com/"+username+'/')
-        posts=self.browser.find_element_by_class_name(class_name)
-        ac.send_keys(Keys.ARROW_DOWN).perform()
-        # try: 
-        #     # element = self.browser.find_element_by_class_name(class_name)
-        #     for post in range(int(posts.text)):
-        #         article=self.browser.find_element_by_tag_name('article')
-        #         # article.find_element_by_xpath
-                # self.browser.find_elements_by_class_name('wpO6b').click()[1]
-                # sleep(2)
-                # self.browser.find_elements_by_class_name('wpO6b').click()[-1]
-
-        # except AttributeError as e:
-        #     print(e)
-
-
-bot=insta_logger('_shyamgupta','shyaminsta')
+ 
+bot=insta_logger("your_username","your_password")
 bot.login_in_func()
 
-bot.liker('_shyamgupta','g47SY')
+#for iron man fans
 
+bot.follow_button('robertdowneyjr')
 
+bot.unfollow('robertdowneyjr')
 
-
-
-
-
-# bot.liker('_shyamgupta')
-# bot.follow_button('robertdowneyjr')
-
-# bot.unfollow('robertdowneyjr')
-# for i in ['ishwarya_10','saakshi_reddy11']:
-#     bot.messenger(i)
-#     sleep(4)
-    # continue
-# session=ip('_shyamgupta','shyaminsta')
-# session.login()
-# session.like_by_tags(["fashion",'singing'], amount=1)
-# session.set_dont_like(['porn','nude','boobs','bf'])
-
-'''
-if statements and custom inputs has to be used
-then only it will be fully customisable
-
-
-instapy still not used in the program its full selenium
-'''
+for i in [list_of_people]:
+    bot.messenger(i)
+    sleep(4)
 
 
