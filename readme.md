@@ -1,9 +1,9 @@
+### make a interactive bot for python
+to makesure anywork in instagram doesnt take much of your time 
 
-# Hi
-hello
-# New branch
+# very easy to use 
+# and user friendly 
 
-# Hihello
-#bhaiyaaaa
+# any suggestions or functions if you want then you can push and i will make sure after testing it is commited
 
-#bhaiyaaa
+ 
