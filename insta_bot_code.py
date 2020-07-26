@@ -86,24 +86,27 @@ class insta_logger():
         by using previous logger functions
         and makes the task possible
         '''
+        
+        
         self.browser.get('https:/instagram.com/'+username+'/')
+        sleep(2)
         self.browser.find_element_by_xpath('//button[text()="Message"]').click()
-        sleep(4)
+        sleep(3)
         
         msg_search=self.browser.find_element_by_class_name("focus-visible")
-        msg_search.send_keys('sorry but this process of experiment will go on for sometime ')
+        msg_search.send_keys('this is a trial msg from bot')
         msg_search.send_keys(Keys.RETURN)
  
-bot=insta_logger("your_username","your_password")
+bot=insta_logger("username","password")
 bot.login_in_func()
 
 #for iron man fans
 
 bot.follow_button('robertdowneyjr')
 
-bot.unfollow('robertdowneyjr')
+# bot.unfollow('robertdowneyjr')
 
-for i in [list_of_people]:
+for i in ['list of people']:
     bot.messenger(i)
     sleep(4)
 
