@@ -96,18 +96,27 @@ class insta_logger():
         msg_search=self.browser.find_element_by_class_name("focus-visible")
         msg_search.send_keys('this is a trial msg from bot')
         msg_search.send_keys(Keys.RETURN)
- 
-bot=insta_logger("username","password")
-bot.login_in_func()
-
-#for iron man fans
-
-bot.follow_button('robertdowneyjr')
-
-# bot.unfollow('robertdowneyjr')
-
-for i in ['list of people']:
-    bot.messenger(i)
-    sleep(4)
 
 
+def main():
+   '''
+   this executes all the main commands of the program
+   '''  
+    bot=insta_logger('your_username',"your_password")
+    bot.login_in_func()
+'''
+    for iron man fans
+'''
+    bot.follow_button('robertdowneyjr')
+'''
+also if you want then to unfollow in the same run you can un comment this piece of code 
+'''
+
+    bot.unfollow('robertdowneyjr')
+
+    for i in ['list of people']:
+        bot.messenger(i)
+        sleep(4)
+
+
+main()
