@@ -94,6 +94,9 @@ class insta_logger():
         sleep(3)
         
         msg_search=self.browser.find_element_by_class_name("focus-visible")
+        
+        ##$$$ ENTER THE MESSAGE YOU WANT TO SEND IN THE SEND_KEYS METHOD BELOW
+        
         msg_search.send_keys('this is a trial msg from bot')
         msg_search.send_keys(Keys.RETURN)
 
@@ -101,6 +104,11 @@ class insta_logger():
 def main():
    '''
    this executes all the main commands of the program
+   
+   username n password should be placed in place of 
+   
+   ##your_username## , ##your_password## 
+   
    '''  
     bot=insta_logger('your_username',"your_password")
     bot.login_in_func()
@@ -113,7 +121,11 @@ also if you want then to unfollow in the same run you can un comment this piece 
 '''
 
     bot.unfollow('robertdowneyjr')
+##$$$ ENTER THE MESSAGE YOU WANT TO SEND IN THE SEND_KEYS OF THE MESSENGER  FUNCTION OF THE CLASS 
 
+
+#### inlist of people insert the ids of the people you  want to message
+    
     for i in ['list of people']:
         bot.messenger(i)
         sleep(4)
